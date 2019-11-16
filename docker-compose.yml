@@ -1,0 +1,7 @@
+version: "3"
+services:
+  phets-soa-interface:
+    build: .
+    command: bash -c "sleep 40 && rm -f tmp/pids/server.pid && bundle exec rails s -p 2000 -b '0.0.0.0'"
+    ports:
+      - "2000:2000"

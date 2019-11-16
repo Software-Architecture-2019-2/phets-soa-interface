@@ -9,4 +9,4 @@ ADD Gemfile.lock /phets_soa_interface/Gemfile.lock
 RUN bundle install
 ADD . /phets_soa_interface
 
-EXPOSE 2000
+EXPOSE 4008

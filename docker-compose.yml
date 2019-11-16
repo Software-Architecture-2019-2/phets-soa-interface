@@ -2,6 +2,9 @@ version: "3"
 services:
   phets-soa-interface:
     build: .
-    command: bash -c "sleep 40 && rm -f tmp/pids/server.pid && bundle exec rails s -p 2000 -b '0.0.0.0'"
+    command: bash -c "sleep 40 && rm -f tmp/pids/server.pid && bundle exec rails s -p 4008 -b '0.0.0.0'"
+    environment: 
+      EVENT_MS_HOST: 172.17.0.1
+      EVENT_MS_PORT: 4001
     ports:
-      - "2000:2000"
+      - "4008:4008"

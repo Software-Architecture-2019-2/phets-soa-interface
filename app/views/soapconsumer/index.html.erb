@@ -1,0 +1,10 @@
+<% form_tag :action =>'respuesta' do %>
+<p>
+    <label>Ingrese el id del usuario: <br>
+        <% text_field_tag :id, params[:id] %>
+    </label>
+</p>
+<p>
+    <%= submit_tag 'Enviar' %>
+</p>
+<% end %>

@@ -1,0 +1,14 @@
+<% if @user %>
+    <dl id ="id">
+        <dt>
+        <dd>valid:</dd>
+        <dd><%= @user.userValid></dd>
+        <dd>name:</dd>
+        <dd><%= @user.userName></dd>
+        <dd>email:</dd>
+        <dd><%= @user.userEmail></dd>
+        <dd>nickname:</dd>
+        <dd><%= @user.userNickname></dd>
+        </dt>
+    </dl>
+<% end %>

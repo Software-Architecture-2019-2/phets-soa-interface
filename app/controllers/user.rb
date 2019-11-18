@@ -5,7 +5,7 @@ class User
         client = Savon::Client.new(wsdl: "http://35.238.81.164:5003/wsusers/wsdl")
         response = client.call :check_user, message: { "userId" => id }
         if response.success?
-            data = response.to_hash(:check_user_response,:check_user_result,:new_data_set,:table).first
+            data = response.body[:check_user_response]
             if data
                 @userValid = data[:userValid] 
                 @userName = data[:userName]
